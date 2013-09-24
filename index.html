@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Framework</title>
+
+	<!-- App Style Sheet -->
+	<link rel="stylesheet" href="css/app.css" type="text/css">
+	<link rel="stylesheet" href="css/animations.css" type="text/css">
+	<link rel="stylesheet" href="css/entypo.css" type="text/css">
+</head>
+
+<body>
+	<!-- Notification Box & Loader (Required) -->
+	<div id="loader">Loading...</div>
+	<div id="notificationWrapper">
+		<div id="notificationBody">
+			<i></i>
+			<div class="title">
+				Title Goes Here
+			</div>
+			<div class="message">
+				Message Goes Here
+			</div>
+			<div class="buttons">
+				<button class="first">Yes</button>
+				<button class="second">No</button>
+			</div>
+		</div>
+	</div> 
+	<!-- End Notification Box -->
+
+	<!-- Aside Menu -->
+	<aside id="asideMenu">
+		<header>
+			<h1>Main Menu</h1>
+		</header>
+		<article class="current">
+			<ul>
+				<li data-target="notificationScreen">Notifications</li>
+				<li data-target="animationScreen" class="active">Animations</li>
+				<li data-target="footerScreen">Footer</li>
+				<li data-target="loaderScreen">Loader</li>
+				<li data-target="animationTestScreen">Section 1</li>
+			</ul>
+			<h2>Menu Header</h2>
+			<ul>
+				<li data-target="animationTestScreen">Section 1</li>
+				<li data-target="animationScreen">Section 2</li>
+				<li data-target="animationTestScreen">Section 1</li>
+				<li data-target="animationTestScreen">Section 1</li>
+				<li data-target="animationTestScreen">Section 1</li>
+			</ul>
+		</article>
+	</aside>
+	<!-- End Aside Menu -->
+
+	<!-- Animations Test Screen -->
+	<section id="animationScreen" class="curren">
+		<header>
+			<li class="pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<h1>Animations</h1>
+			<li class="pull-right" data-target="animationTestScreen" data-anim="pop-in"><span>Longest</span></li>
+		</header>
+		<article class="current">
+			<!-- Slide -->
+			<h2>Slide</h2>
+			<ul class="chevron selectable">
+				<li data-target="animationTestScreen" data-anim="slide-left">
+					<span>Slide Left</span><span>0.3 seconds</span>
+				</li>
+				<li data-target="animationTestScreen" data-anim="slide-right">Slide Right</li>
+				<li data-target="animationTestScreen" data-anim="slide-up">Slide Up</li>
+				<li data-target="animationTestScreen" data-anim="slide-down">Slide Down</li>
+			</ul>
+
+			<!-- Cover -->
+			<h2>Cover</h2>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="cover-left">Cover Left</li>
+				<li data-target="animationTestScreen" data-anim="cover-right">Cover Right</li>
+				<li data-target="animationTestScreen" data-anim="cover-up">Cover Up</li>
+				<li data-target="animationTestScreen" data-anim="cover-down">Cover Down</li>
+			</ul>
+
+			<!-- Reveal -->
+			<h2>Reveal</h2>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="reveal-left">Reveal Left</li>
+				<li data-target="animationTestScreen" data-anim="reveal-right">Reveal Right</li>
+				<li data-target="animationTestScreen" data-anim="reveal-up">Reveal Up</li>
+				<li data-target="animationTestScreen" data-anim="reveal-down">Reveal Down</li>
+			</ul>
+
+			<!-- Pop -->
+			<h2>Pop</h2>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="pop-in">Pop In</li>
+				<li data-target="animationTestScreen" data-anim="pop-out">Pop Out</li>
+			</ul>
+
+			<!-- Fade -->
+			<h2>Fade</h2>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="fade">Fade</li>
+			</ul>
+
+			<!-- Flip -->
+			<h2>Flip</h2>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="flip-left">Flip Left</li>
+				<li data-target="animationTestScreen" data-anim="flip-right">Flip Right</li>
+			</ul>
+
+			<!-- Cube -->
+			<h2>Cube</h2>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="cube-left">Cube Left</li>
+				<li data-target="animationTestScreen" data-anim="cube-right">Cube Right</li>
+			</ul>
+		</article>
+	</section>
+
+	<!-- Animation Test Helper -->
+	<section id="animationTestScreen" class="current">
+		<header>
+			<li id="backButton" class="pull-left" data-target="animationScreen" data-anim="fade">
+				<i class="icon-left-open"></i>
+				<span>Settings</span>
+			</li>
+			<h1>Second Screen</h1>
+		</header>
+		<article class="current indented">
+			Click back to revese the animation!
+		</article>
+	</section>
+
+	<!-- Notification Test Screen -->
+	<section id="notificationScreen">
+		<header>
+			<li class="btn pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<h1>Notifications</h1>
+		</header>
+		<article class="current indented">
+			<button id="plainN" class="btn block rounded">Show Light Notification</button>
+			<button id="darkN" class="btn block black rounded">Show Dark Notification</button>
+			<button id="alertN" class="btn block yellow rounded">Show Alert Notification</button>
+			<button id="errorN" class="btn block red rounded">Show Error Notification</button>
+			<button id="successN" class="btn block green rounded">Show Success Notification</button>
+			<button id="infoN" class="btn block blue rounded">Show Info Notification</button>
+		</article>
+	</section>
+
+	<!-- Footer Test Screen -->
+	<section id="footerScreen">
+		<header>
+			<li class="btn pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<h1>Footer</h1>
+			<li id="indentedT" class="btn pull-right">Indented</li>
+		</header>
+
+		<header class="secondary">
+			<ul class="group">
+				<li data-target="article1" data-header="Favorites" class="active">Favorites</li>
+				<li data-target="article2" data-header="Recent">Recent</li>
+				<li data-target="article3" data-header="Contacts">Contacts</li>
+				<li data-target="article4" data-header="Voicemail">Voicemail</li>
+			</ul>
+		</header>
+
+		<footer>
+			<ul class="with-text">
+				<li data-target="article1" data-header="Favorites" class="active"><i class="icon-star"></i>Favorites</li>
+				<li data-target="article2" data-header="Recent"><i class="icon-clock"></i>Recent</li>
+				<li data-target="article3" data-header="Contacts"><i class="icon-user"></i>Contacts</li>
+				<li data-target="article4" data-header="Voicemail"><i class="icon-tape"></i>Voicemail</li>
+			</ul>
+		</footer>
+
+		<article id="article1" class="current has-footer secondary-header">
+			<ul class="group">
+				<li id="simpleL">Simple</li>
+				<li id="chevronL" class="active">Chevron</li>
+				<li id="selectableL">Selectable</li>
+			</ul>
+			
+			<ul>
+				<li class="heading">Simple List</li>
+				<li>Normally Aligned Text</li>
+				<li><span class="center-text">Center Text</span></li>
+				<li><span class="right-text">Right Text</span></li>
+			</ul>
+
+			<ul>
+				<li class="heading">Left & Right Text</li>
+				<li><span>Left Text</span><span>Right Text</span></li>
+				<li><span>Left Text</span><span>Right Text</span></li>
+				<li><span>Left Text</span><span>Right Text</span></li>
+			</ul>
+
+			<ul>
+				<li>
+					<span>Left Text</span>
+					<span>
+						<button class="btn red rounded" type="submit">Button</button>
+					</span>
+				</li>
+				<li class="icon">
+					<span>
+						<i class="icon-cog"></i>Simple Text With Icon
+					</span>
+				</li>
+			</ul>
+
+			<ul>
+				<li class="heading">Description List</li>
+				<li class="no-flex">
+					<div>
+						<span>John Appleseed</span>
+						<span>Yesterday</span>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</p>
+				</li>
+				<li class="no-flex">
+					<div>
+						<span>John Appleseed</span>
+						<span>Yesterday</span>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</p>
+				</li>
+				<li class="no-flex">
+					<div>
+						<span>John Appleseed</span>
+						<span>Yesterday</span>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</p>
+				</li>
+			</ul>
+		</article>
+
+		<article id="article2" class="indented has-footer secondary-header">
+			Article 2
+		</article>
+
+		<article id="article3" class="indented has-footer secondary-header">
+			Article 3
+		</article>
+		
+		<article id="article4" class="indented has-footer secondary-header">
+			<ul class="rounded">
+				<li>
+					<label>Name</label><input type="text" placeholder="John Appleseed"/>
+				</li>
+			</ul>
+		</article>
+	</section>
+
+	<!-- Test Loader Screen -->
+	<section id="loaderScreen">
+		<header>
+			<li class="btn pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<h1>Loader</h1>
+		</header>
+
+		<article class="current indented">
+			<button id="showLoader" class="btn block rounded">Show Loader</button>
+			<button id="hideLoader" class="btn block rounded">Hide Loader</button>
+		</article>
+	</section>
+
+</body>
+
+<!-- Lazy Load JS & CSS -->
+<script src="js/lazyload.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+	LazyLoad.js(['http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js', 'js/app.js', 'js/jquery.hammer.min.js'], function() {
+		// All JS has been loaded, start app
+		app.start();
+
+		/* Show and hide menu */
+		//setTimeout(app.showAside, 500);
+		//setTimeout(app.hideAside, 1000);
+
+		/* Loading Spinner */
+		hammer.on('tap', '#showLoader', app.showLoader);
+		hammer.on('tap', '#hideLoader', app.hideLoader);
+
+		var anims = {
+			'slide-left'	: 'slide-right',
+			'slide-right'	: 'slide-left',
+			'slide-up'		: 'slide-down',
+			'slide-down'	: 'slide-up',
+			'cover-left'	: 'reveal-right',
+			'cover-right'	: 'reveal-left',
+			'cover-up'		: 'reveal-down',
+			'cover-down'	: 'reveal-up',
+			'reveal-left'	: 'cover-right',
+			'reveal-right'	: 'cover-left',
+			'reveal-up'		: 'cover-down',
+			'reveal-down'	: 'cover-left',
+			'pop-in'		: 'pop-out',
+			'pop-out'		: 'pop-in',
+			'flip-left'		: 'flip-right',
+			'flip-right'	: 'flip-left',
+			'cube-left'		: 'cube-right',
+			'cube-right'	: 'cube-left',
+			'fade'			: 'fade'
+		}
+
+		/* Screen Animations */
+		hammer.on('tap', '#animationScreen article ul li', function() {
+			$("#backButton").attr('data-anim', anims[$(this).attr('data-anim')]);
+		});
+
+		/* Notifications */
+		hammer.on('tap', '#plainN', function() {
+			/* Show First Notification */
+			app.showNotification({
+				style: 'light',
+				icon: 'icon-link',
+				title: 'Chain Notifications',
+				message: 'Would you like to see some notifications chained one after another?',
+				buttons: {
+					first: 'Yes',
+					firstCallback: function() {
+						/* Show Second Notification */
+						setTimeout(function() {
+							app.showNotification({
+								icon: 'icon-user',
+								style: 'light',
+								title: '2nd Chain',
+								message: 'Up for another notification?.',
+								buttons: {
+									first: 'Yes Sir',
+									firstCallback: function() {
+										/* Show Third Notification */
+										setTimeout(function() {
+											app.showNotification({
+												icon: 'icon-user',
+												style: 'error',
+												title: 'Last Chain',
+												message: 'This is the last chain notification.',
+												time: '1500'
+											});
+										}, 301);
+									},
+									second: 'No Sir',
+									secondCallback: function() {
+
+									}
+								}
+							});
+						}, 301);
+					},
+					second: 'No',
+					secondCallback: function() {
+						console.log('Canceled');
+					}
+				}
+			});
+		});
+		hammer.on('tap', '#alertN', function() {
+			app.showNotification({
+				icon: 'icon-location',
+				style: 'alert',
+				title: 'Warning!',
+				message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in dolor est.',
+				time: '0',
+				buttons: {
+					first: 'Yes',
+					firstCallback: function() {
+						console.log('First Click');
+					},
+					second: 'No',
+					secondCallback: function() {
+						console.log('Second Click');
+					}
+				}
+			});
+		});
+		hammer.on('tap', '#errorN', function() {
+			app.showNotification({
+				icon: 'icon-trash',
+				style: 'error',
+				title: 'Oh Snap!',
+				message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in dolor est.',
+				time: 'stay',
+				buttons: {
+					first: 'Delete',
+					firstCallback: function() {
+						console.log('First Click');
+					},
+					second: 'Cancel',
+					secondCallback: function() {
+						console.log('Second Click');
+					}
+				}
+			});
+		});
+		hammer.on('tap', '#darkN', function() {
+			app.showNotification({
+				icon: 'icon-trash',
+				title: 'Oh Snap!',
+				message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in dolor est.',
+				time: 'stay',
+				buttons: {
+					first: 'Delete',
+					firstCallback: function() {
+						console.log('First Click');
+					},
+					second: 'Cancel',
+					secondCallback: function() {
+						console.log('Second Click');
+					}
+				}
+			});
+		});
+		hammer.on('tap', '#successN', function() {
+			app.showNotification({
+				icon: 'icon-flight',
+				style: 'success',
+				title: 'Well Done!',
+				message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in dolor est.',
+			});
+		});
+		hammer.on('tap', '#infoN', function() {
+			app.showNotification({
+				icon: 'icon-twitter',
+				style: 'info',
+				title: 'Heads Up!',
+				message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in dolor est.',
+				time: '0'
+			});
+		});
+		hammer.on('tap', '#indentedT', function() {
+			$('#article1').toggleClass('indented rounded');
+		});
+		hammer.on('tap', '#chevronL', function() {
+			$('#article1 ul:not(.group)').removeClass().addClass('chevron');
+		});
+		hammer.on('tap', '#selectableL', function() {
+			$('#article1 ul:not(.group)').removeClass().addClass('selectable chevron');
+		});
+		hammer.on('tap', '#simpleL', function() {
+			$('#article1 ul:not(.group)').removeClass();
+		});
+	});
+</script>
+</html>
