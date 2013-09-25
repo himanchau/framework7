@@ -44,11 +44,10 @@
 				<li data-target="animationScreen" class="active">Animations</li>
 				<li data-target="footerScreen">Footer</li>
 				<li data-target="loaderScreen">Loader</li>
-				<li data-target="animationTestScreen">Section 1</li>
 			</ul>
 			<h2>Menu Header</h2>
 			<ul>
-				<li data-target="animationTestScreen">Section 1</li>
+				<li data-target="animationTestScreen">Test Screen</li>
 				<li data-target="animationScreen">Section 2</li>
 				<li data-target="animationTestScreen">Section 1</li>
 				<li data-target="animationTestScreen">Section 1</li>
@@ -66,18 +65,20 @@
 			<li class="pull-right" data-target="animationTestScreen" data-anim="pop-in"><i class="icon-github"></i></li>
 		</header>
 		<article class="current">
-			<!-- Slide -->
+			<h2>iOS 7</h2>
+			<ul class="chevron selectable">
+				<li data-target="animationTestScreen" data-anim="ios7-left">Left</li>
+				<li data-target="animationTestScreen" data-anim="ios7-right">Right</li>
+			</ul>
+
 			<h2>Slide</h2>
 			<ul class="chevron selectable">
-				<li data-target="animationTestScreen" data-anim="slide-left">
-					<span>Slide Left</span><span>0.3 seconds</span>
-				</li>
+				<li data-target="animationTestScreen" data-anim="slide-left">Slide Left</li>
 				<li data-target="animationTestScreen" data-anim="slide-right">Slide Right</li>
 				<li data-target="animationTestScreen" data-anim="slide-up">Slide Up</li>
 				<li data-target="animationTestScreen" data-anim="slide-down">Slide Down</li>
 			</ul>
 
-			<!-- Cover -->
 			<h2>Cover</h2>
 			<ul>
 				<li data-target="animationTestScreen" data-anim="cover-left">Cover Left</li>
@@ -86,7 +87,6 @@
 				<li data-target="animationTestScreen" data-anim="cover-down">Cover Down</li>
 			</ul>
 
-			<!-- Reveal -->
 			<h2>Reveal</h2>
 			<ul>
 				<li data-target="animationTestScreen" data-anim="reveal-left">Reveal Left</li>
@@ -95,27 +95,23 @@
 				<li data-target="animationTestScreen" data-anim="reveal-down">Reveal Down</li>
 			</ul>
 
-			<!-- Pop -->
 			<h2>Pop</h2>
 			<ul>
 				<li data-target="animationTestScreen" data-anim="pop-in">Pop In</li>
 				<li data-target="animationTestScreen" data-anim="pop-out">Pop Out</li>
 			</ul>
 
-			<!-- Fade -->
 			<h2>Fade</h2>
 			<ul>
 				<li data-target="animationTestScreen" data-anim="fade">Fade</li>
 			</ul>
 
-			<!-- Flip -->
 			<h2>Flip</h2>
 			<ul>
 				<li data-target="animationTestScreen" data-anim="flip-left">Flip Left</li>
 				<li data-target="animationTestScreen" data-anim="flip-right">Flip Right</li>
 			</ul>
 
-			<!-- Cube -->
 			<h2>Cube</h2>
 			<ul>
 				<li data-target="animationTestScreen" data-anim="cube-left">Cube Left</li>
@@ -129,20 +125,15 @@
 		<header>
 			<li id="backButton" class="pull-left" data-target="animationScreen" data-anim="fade">
 				<i class="icon-left-open-mini back"></i>
-				<span>Settings</span>
+				<span>Back</span>
 			</li>
-			<h1>Safari</h1>
+			<h1>Test Screen</h1>
 		</header>
 		<article class="current indented">
-			<ul class="chevron selectable">
-				<li data-target="animationTestScreen" data-anim="slide-left">
-					<span>Search Engine</span><span>Google</span>
-				</li>
-				<li data-target="animationTestScreen" data-anim="slide-right">AutoFill</li>
-			</ul>
 			<ul>
-				<li data-target="animationTestScreen" data-anim="slide-up"><span>Open Links</span><span>In New Page</span></li>
-				<li data-target="animationTestScreen" data-anim="slide-down">Block Pop-ups</li>
+				<li data-target="animationTestScreen" data-anim="slide-left">
+					Click Back to reverse animation!
+				</li>
 			</ul>
 		</article>
 	</section>
@@ -150,27 +141,39 @@
 	<!-- Notification Test Screen -->
 	<section id="notificationScreen">
 		<header>
-			<li class="btn pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<li class="pull-left" data-target="aside"><i class="icon-menu"></i></li>
 			<h1>Notifications</h1>
 		</header>
 		<article class="current indented">
-			<button id="plainN" class="btn block rounded">Show Light Notification</button>
-			<button id="darkN" class="btn block black rounded">Show Dark Notification</button>
-			<button id="alertN" class="btn block yellow rounded">Show Alert Notification</button>
-			<button id="errorN" class="btn block red rounded">Show Error Notification</button>
-			<button id="successN" class="btn block green rounded">Show Success Notification</button>
-			<button id="infoN" class="btn block blue rounded">Show Info Notification</button>
+			<ul>
+				<li id="plainN" class="btn-light">Show Light Notification</li>
+			</ul>
+			<ul>
+				<li id="darkN" class="btn-dark">Show Dark Notification</li>
+			</ul>
+			<ul>
+				<li id="alertN" class="btn-alert">Show Alert Notification</li>
+			</ul>
+			<ul>
+				<li id="errorN" class="btn-error">Show Error Notification</li>
+			</ul>
+			<ul>
+				<li id="successN" class="btn-success">Show Success Notification</li>
+			</ul>
+			<ul>
+				<li id="infoN" class="btn-info">Show Info Notification</li>
+			</ul>
 		</article>
 	</section>
 
 	<!-- Footer Test Screen -->
 	<section id="footerScreen">
 		<header>
-			<li class="btn pull-left" data-target="aside">
+			<li class="pull-left" data-target="aside">
 				<i class="icon-menu"></i>
 			</li>
 			<h1>Footer</h1>
-			<li id="indentedT" class="btn pull-right">
+			<li id="indentedT" class="pull-right">
 				<span>Indented</span>
 			</li>
 		</header>
@@ -274,13 +277,16 @@
 	<!-- Test Loader Screen -->
 	<section id="loaderScreen">
 		<header>
-			<li class="btn pull-left" data-target="aside"><i class="icon-menu"></i></li>
-			<h1>Loader</h1>
+			<li class="pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<h1>Loading Spinner</h1>
 		</header>
 
 		<article class="current indented">
-			<button id="showLoader" class="btn block rounded">Show Loader</button>
-			<button id="hideLoader" class="btn block rounded">Hide Loader</button>
+			<h2>Loader Test</h2>
+			<ul>
+				<li id="showLoader" class="btn">Show Loader</li>
+				<li id="hideLoader" class="btn">Hide Loader</li>
+			</ul>
 		</article>
 	</section>
 
@@ -303,6 +309,8 @@
 		hammer.on('tap', '#hideLoader', app.hideLoader);
 
 		var anims = {
+			'ios7-left'		: 'ios7-right',
+			'ios7-right'	: 'ios7-left',
 			'slide-left'	: 'slide-right',
 			'slide-right'	: 'slide-left',
 			'slide-up'		: 'slide-down',

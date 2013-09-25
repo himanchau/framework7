@@ -37,8 +37,7 @@ section:not(.current) {
 header, footer {
 	position: absolute; overflow: hidden; z-index: 10; top: 0; right: 0; left: 0; height: 44px;
 	color: rgb(21,126,251);
-	background-color: rgb(245,245,245);
-	box-shadow: 0 0 2px -1px #000;
+	background: repeat-x bottom left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#A0A0A0' x='0' y='0' width='1' height='0.5'/></svg>") rgb(245,245,245);
 }
 header.secondary {
 	top: 44px;
@@ -77,6 +76,7 @@ header li.pull-right {
 footer {
 	top: auto; bottom: 0;
 	font-family: "HelveticaNeue"; text-align: center;
+	background: repeat-x top left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#A0A0A0' x='0' y='0' width='1' height='0.5'/></svg>") rgb(245,245,245);
 }
 footer ul {
 	display: -webkit-box; max-width: 500px;
@@ -103,15 +103,17 @@ footer ul.with-text i {
 /***** Group Selectable ******/
 ul.group {
 	display: -webkit-box;
-	font-size: 13px; line-height: 23px; text-align: center; font-family: "HelveticaNeue";
+	line-height: 23px; text-align: center; font-family: "HelveticaNeue";
 	border: 1px solid rgb(21,126,251); border-radius: 3px;
-	margin: 7px;
+	margin: 7px; padding: 0; 
+	background-image: none; background: #FFF;
 }
 ul.group li {
 	display: block; -webkit-box-flex: 1; width: 0;
 	border: 0; border-right: 1px solid rgb(21,126,251);
+	color: rgb(21,126,251); font-size: 13px;
 	padding: 2px 0; margin-left: 0;
-	color: rgb(21,126,251);
+	background: none;
 }
 ul.group li:last-child {
 	border-right: none;
@@ -148,23 +150,23 @@ article h2 + ul {
 	margin-top: 0;
 }
 article ul {
-	background: #FFF; overflow: hidden;
-	box-shadow: 0 1px 1px -1px #999,
-				0 -1px 1px -1px #999;
-	margin-top: 35px;
+	background-color: #FFF; overflow: hidden;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#A0A0A0' x='0' y='0' width='1' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#A0A0A0' x='0' y='0' width='1' height='0.5'/></svg>");
+	background-position: bottom left, top left;
+	background-repeat: repeat-x, repeat-x;
+	margin-top: 35px; padding: 1px 0;
 }
 article ul:last-child {
 	margin-bottom: 30px;
 }
 article ul li {
 	display: -webkit-box;
-	color: #000; font-size: 17px; line-height: 26px; font-family: "HelveticaNeue-Light";
-	box-shadow: 0 1px 1px -1px #888;
-	padding: 9px 15px 9px 0;
-	margin-left: 15px;
+	color: #000; font-size: 17px; line-height: 25px; font-family: "HelveticaNeue-Light";
+	background: no-repeat bottom left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#C8C8C8' x='15' y='0' width='100%' height='0.5'/></svg>");
+	padding: 9px 15px;
 }
 article ul li:last-child {
-	box-shadow: none;
+	background: none;
 }
 article ul li.no-flex {
 	display: block;
@@ -214,7 +216,7 @@ article ul.chevron li:after {
 
 /****** Selectable List ******/
 article ul.selectable li:active {
-	background: rgb(246,247,248);
+	background-color: rgb(244,244,244);
 }
 
 /****** List Icon ******/
@@ -228,41 +230,28 @@ article ul li i {
 	color: #777; font-size: 24px; line-height: 42px;
 }
 
-/****** Section Article Buttons ******/
-article .btn {
-	position: relative; display: inline-block; -webkit-appearance: none;
-	padding: 4px 12px; margin: 0;
-	line-height: 18px; color: #555; text-align: center; font-family: "HelveticaNeue-Medium";
-	background-color: #fafafa;
-	border: 1px solid rgba(0,0,0,.15);
+/****** Buttons ******/
+article [class^='btn'] {
+	color: rgb(21,126,251); text-align: center; font-family: "HelveticaNeue-Medium";
+	margin-left: 0; padding: 9px; display: block;
 }
-article .btn:active {
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,.05), rgba(0,0,0,.05));
+article .btn-light {
+	color: #999;
 }
-article .btn.blue {
-	color: #fff;
-	background-color: #00A1CB;
+article .btn-dark {
+	color: #000;
 }
-article .btn.yellow {
-	color: #fff;
-	background-color: #f39c12;
+article .btn-info {
+	color: #00A1CB;
 }
-article .btn.red {
-	color: #fff;
-	background-color: #e74c3c;
+article .btn-alert {
+	color: #f39c12;
 }
-article .btn.green {
-	color: #fff;
-	background-color: #16a085;
+article .btn-error {
+	color: #e74c3c;
 }
-article .btn.black {
-	color: #fff;
-	background-color: #444;
-}
-article .btn.block {
-	display: block; width: 100%;
-	padding: 11px 0 13px; margin-bottom: 10px;
-	font-size: 16px;
+article .btn-success {
+	color: #16a085;
 }
 
 /* Inputs */
@@ -281,45 +270,12 @@ input {
 /****** Aside Menu ******/
 #asideMenu {
 	position: absolute; overflow: hidden; overflow-y: touch;
-	top: 0; bottom: 0; left: 0; width: 290px;
-	background: rgb(60,60,60);
-	color: #FFF;
+	top: 0; bottom: 0; left: 0; width: 285px;
 	-webkit-transform: translate3d(0,0,0);
+	background-color: rgb(229,229,229);
 }
 #asideMenu:not(.current) {
 	-webkit-transform: translate3d(-100%,0,0);
-}
-#asideMenu header {
-	border-bottom-color: rgba(0,0,0,.9);
-	background: -webkit-linear-gradient(top, rgb(50,50,50), rgb(30,30,30));
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
-}
-#asideMenu h2 {
-	color: #FFF; text-shadow: none; font-size: 12px; text-transform: uppercase; line-height: 25px;
-	border-bottom: 1px solid rgba(0,0,0,.63);
-	margin: 0;
-}
-#asideMenu h2 + ul li:first-child {
-	border-top: none;
-}
-#asideMenu ul {
-	margin: 0;
-	border: none;
-	box-shadow: none;
-	background: rgba(0,0,0,.2);
-}
-#asideMenu ul li {
-	color: #BBB;
-	border-top: 1px solid rgba(255,255,255,.1); border-bottom: 1px solid rgba(0,0,0,.5);
-}
-#asideMenu ul:first-child li:first-child {
-	border-top: none;
-}
-#asideMenu ul li.active {
-	color: #FFF;
-	background: rgba(0,0,0,.5);
-	border-top-color: transparent; border-bottom-color: rgba(255,255,255,.03);
-	box-shadow: 0 -1px 0 rgb(60,60,60);
 }
 
 /****** Loading Spinner ******/
