@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Framework</title>
 
@@ -59,11 +59,11 @@
 	<!-- End Aside Menu -->
 
 	<!-- Animations Test Screen -->
-	<section id="animationScreen" class="curren">
+	<section id="animationScreen" class="current">
 		<header>
 			<li class="pull-left" data-target="aside"><i class="icon-menu"></i></li>
 			<h1>Animations</h1>
-			<li class="pull-right" data-target="animationTestScreen" data-anim="pop-in"><span>Longest</span></li>
+			<li class="pull-right" data-target="animationTestScreen" data-anim="pop-in"><i class="icon-github"></i></li>
 		</header>
 		<article class="current">
 			<!-- Slide -->
@@ -125,16 +125,25 @@
 	</section>
 
 	<!-- Animation Test Helper -->
-	<section id="animationTestScreen" class="current">
+	<section id="animationTestScreen">
 		<header>
 			<li id="backButton" class="pull-left" data-target="animationScreen" data-anim="fade">
-				<i class="icon-left-open"></i>
+				<i class="icon-left-open-mini back"></i>
 				<span>Settings</span>
 			</li>
-			<h1>Second Screen</h1>
+			<h1>Safari</h1>
 		</header>
 		<article class="current indented">
-			Click back to revese the animation!
+			<ul class="chevron selectable">
+				<li data-target="animationTestScreen" data-anim="slide-left">
+					<span>Search Engine</span><span>Google</span>
+				</li>
+				<li data-target="animationTestScreen" data-anim="slide-right">AutoFill</li>
+			</ul>
+			<ul>
+				<li data-target="animationTestScreen" data-anim="slide-up"><span>Open Links</span><span>In New Page</span></li>
+				<li data-target="animationTestScreen" data-anim="slide-down">Block Pop-ups</li>
+			</ul>
 		</article>
 	</section>
 
@@ -157,9 +166,13 @@
 	<!-- Footer Test Screen -->
 	<section id="footerScreen">
 		<header>
-			<li class="btn pull-left" data-target="aside"><i class="icon-menu"></i></li>
+			<li class="btn pull-left" data-target="aside">
+				<i class="icon-menu"></i>
+			</li>
 			<h1>Footer</h1>
-			<li id="indentedT" class="btn pull-right">Indented</li>
+			<li id="indentedT" class="btn pull-right">
+				<span>Indented</span>
+			</li>
 		</header>
 
 		<header class="secondary">

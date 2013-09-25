@@ -12,13 +12,12 @@
 
 /****** Section *******/
 html, body, section {
-	position: absolute; overflow: hidden;
-	top: 0; right: 0; bottom: 0; left: 0;
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden;
 	font: normal 14px/24px "HelveticaNeue-Light", sans-serif;
 	background: #000;
 }
 section {
-	background: rgb(233,234,237);
+	background: rgb(229,229,229);
 	-webkit-backface-visibility: hidden;
 }
 section:not(.current) {
@@ -26,12 +25,6 @@ section:not(.current) {
 }
 
 /****** Helper Classes ******/
-.indented {
-	padding: 10px;
-}
-.rounded {
-	border-radius: 4px;
-}
 .center-text {
 	text-align: center;
 }
@@ -41,32 +34,35 @@ section:not(.current) {
 
 
 /****** Header ******/
-header {
-	position: absolute; overflow: hidden; z-index: 10;
-	top: 0; right: 0; left: 0; height: 44px;
-	color: rgb(0,122,253);
-	background-color: rgba(255,255,255,.9);
-	border-bottom: 1px solid rgba(0,0,0,.2);
+header, footer {
+	position: absolute; overflow: hidden; z-index: 10; top: 0; right: 0; left: 0; height: 44px;
+	color: rgb(21,126,251);
+	background-color: rgb(245,245,245);
+	box-shadow: 0 0 2px -1px #000;
 }
 header.secondary {
 	top: 44px;
 }
 header h1 {
-	text-align: center; font-size: 18px; line-height: 44px; font-family: "HelveticaNeue-Medium"; color: rgb(50,50,50);
+	text-align: center; font-size: 17px; line-height: 44px; font-family: "HelveticaNeue-Medium"; color: #000; font-weight: normal;
 }
 
 header li i, header li span {
-	display: inline-block;
-	width: 44px; height: 44px;
+	display: inline-block; width: 44px; height: 44px;
 	font-size: 27px; line-height: 44px;
 }
 header li span {
-	font-size: 14px; vertical-align: top;
-	margin-left: -10px; padding: 0 10px;
+	font-size: 17px; vertical-align: top;
+	padding: 0 10px;
 	width: auto;
 }
-header li i.icon-left-open {
-	width: 30px;
+header li i.back {
+	width: 25px;
+	font-size: 40px;
+}
+header li i.back + span {
+	margin-left: -15px;
+	font-family: "HelveticaNeue-Light";
 }
 
 /* Header Links Align */
@@ -77,67 +73,52 @@ header li.pull-right {
 	position: absolute; right: 0; top: 0;
 }
 
-/* Header Group List */
-header ul.group {
-	font-size: 12px; color: rgb(0,122,253); font-family: "HelveticaNeue-Medium";
-	border: 1px solid rgb(0,122,253); border-radius: 3px;
-	margin: 7px 14px;
-}
-header ul.group li {
-	line-height: 20px;
-	padding: 4px 0px;
-	border-right-color: rgb(0,122,253);
-}
-header ul.group li:last-child {
-	border-right: none;
-}
-header ul.group li:active, header ul.group li.active {
-	background: rgb(0,122,253);
-	color: #FFF;
-}
-
 /****** Footer ******/ 
 footer {
-	z-index: 10; position: absolute; z-index: 10;
-	left: 0; right:0; bottom: 0; height: 48px;
-	font-weight: 600; text-align: center;
-	background: rgb(50,50,50);
-	border-top: 1px solid rgba(0,0,0,.7);
+	top: auto; bottom: 0;
+	font-family: "HelveticaNeue"; text-align: center;
 }
 footer ul {
-	display: -webkit-box;
-	max-width: 500px;
+	display: -webkit-box; max-width: 500px;
 	margin: 0 auto;
 }
 footer li {
-	position: relative;
-	-webkit-box-flex: 1; width: 0; height: 48px;
-	color: #CCC; font-size: 10px; line-height: 17px; text-shadow: 0px -1px 0px #000;
-	border-top: 1px solid rgba(255,255,255,.1);
+	position: relative; -webkit-box-flex: 1; width: 0; height: 44px;
+	color: #CCC; font-size: 10px; line-height: 17px;
 }
 footer li i {
 	display: block !important;
 	padding-top: 7px;
-	font-size: 30px; line-height: 30px; text-shadow: 0px 1px 0px rgba(0,0,0,.1);
-	background: -webkit-linear-gradient(top, #FFF, #BBB);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	font-size: 28px; line-height: 30px;
 }
 footer li.active {
-	color: #FFF; text-shadow: 0px 1px 0px #000;
-	background: rgb(0,0,0);
-	border-top-color: transparent;
-}
-footer li.active i {
-	background: -webkit-linear-gradient(top, rgb(20,122,255), rgb(70,172,255));
-	background: -webkit-linear-gradient(top, #01A4A4, #1AADAD);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: rgb(21,126,251);
 }
 /* Icons with text */
 footer ul.with-text i {
-	padding-top: 3px; margin-bottom: -1px;
+	padding-top: 2px; margin-bottom: -2px;
 	font-size: 28px; line-height: 28px; 
+}
+
+/***** Group Selectable ******/
+ul.group {
+	display: -webkit-box;
+	font-size: 13px; line-height: 23px; text-align: center; font-family: "HelveticaNeue";
+	border: 1px solid rgb(21,126,251); border-radius: 3px;
+	margin: 7px;
+}
+ul.group li {
+	display: block; -webkit-box-flex: 1; width: 0;
+	border: 0; border-right: 1px solid rgb(21,126,251);
+	padding: 2px 0; margin-left: 0;
+	color: rgb(21,126,251);
+}
+ul.group li:last-child {
+	border-right: none;
+}
+ul.group li:active, ul.group li.active {
+	background: rgb(21,126,251);
+	color: #FFF;
 }
 
 /****** Section Article ******/
@@ -155,39 +136,35 @@ article.secondary-header {
 	top: 88px;
 }
 article.has-footer {
-	bottom: 48px
+	bottom: 44px
 }
 
 /****** Lists ******/
 article h2 {
-	color: rgb(55,78,92); font-size: 13px; font-weight: 400; font-family: "HelveticaNeue-Medium"; text-transform: uppercase;
-	margin-top: 20px; padding-left: 10px;
+	color: #444; font-size: 14px; line-height: 30px; font-weight: normal; font-family: "HelveticaNeue"; text-transform: uppercase;
+	margin-top: 25px; padding-left: 15px;
 }
 article h2 + ul {
 	margin-top: 0;
 }
 article ul {
 	background: #FFF; overflow: hidden;
-	border: 1px solid rgb(217,218,219);
-	border-left: 0;
-	border-right: 0;
-	margin-top: 10px;
+	box-shadow: 0 1px 1px -1px #999,
+				0 -1px 1px -1px #999;
+	margin-top: 35px;
 }
 article ul:last-child {
 	margin-bottom: 30px;
 }
-article.indented ul {
-	margin-bottom: 15px;
-	border: 1px solid rgb(217,218,219);
-}
-article.rounded ul {
-	border-radius: 4px;
-}
 article ul li {
-	padding: 8px 10px;
-	color: #444; line-height: 25px; font-family: "HelveticaNeue"; font-size: 15px;
-	border-bottom: 1px solid rgb(234,235,238);
 	display: -webkit-box;
+	color: #000; font-size: 17px; line-height: 26px; font-family: "HelveticaNeue-Light";
+	box-shadow: 0 1px 1px -1px #888;
+	padding: 9px 15px 9px 0;
+	margin-left: 15px;
+}
+article ul li:last-child {
+	box-shadow: none;
 }
 article ul li.no-flex {
 	display: block;
@@ -206,29 +183,7 @@ article ul li span:first-child, article ul li label {
 	padding-right: 10px;
 }
 article ul li span:first-child + span {
-	text-align: right; color: rgb(2,73,120); font-family: "HelveticaNeue-Light"; font-size: 14px;
-}
-article ul li:last-child {
-	border-bottom: 0;
-}
-
-/****** Group Selectable ******/
-ul.group {
-	display: -webkit-box;
-	background-color: rgb(247,248,249);
-}
-ul.group li {
-	display: block; -webkit-box-flex: 1; width: 0;
-	border: none; border-right: 1px solid rgb(213,214,215);
-	text-align: center; line-height: 22px;
-}
-ul.group li:last-child {
-	border-right: none;
-}
-ul.group li:active, ul.group li.active {
-	color: #555;
-	background-color: rgb(241,242,243);
-	box-shadow: inset 0 0 10px rgba(0,0,0,.08);
+	text-align: right; color: #888;
 }
 
 /****** List Chevron ******/
@@ -236,7 +191,7 @@ article ul.chevron {
 	z-index: 10;
 }
 article ul.chevron li {
-	padding-right: 25px;
+	padding-right: 35px;
 	position: relative;
 	z-index: 0;
 }
@@ -252,9 +207,9 @@ article ul.chevron li:only-child {
 article ul.chevron li:after {
 	content: "\e762";
 	display: block; position: absolute;
-	right: 9px; top: 50%;
-	font-family: "Entypo"; font-size: 20px; line-height: 22px; color: #aaa;
-	margin-top: -9px;
+	right: 15px; top: 50%;
+	font-family: "Entypo"; font-size: 26px; line-height: 26px; color: #CCC;
+	margin-top: -12px;
 }
 
 /****** Selectable List ******/
