@@ -9,11 +9,11 @@ section.hide-menu { -webkit-animation: hideMenu .4s ease forwards; }
 .aside.out { -webkit-animation: hideMenu .4s ease; }
 
 /* iOS7 Style Animation */
-.ios7-left.in { -webkit-animation: slideLeftIn .3s ease; }
-.ios7-left.out { -webkit-animation: ios7LeftOut .3s ease; }
+.ios7-left.in { -webkit-animation: slideLeftIn .3s cubic-bezier(.2,.8,.6,1); }
+.ios7-left.out { -webkit-animation: ios7LeftOut .3s cubic-bezier(.2,.8,.6,1); }
 
-.ios7-right.in { -webkit-animation: ios7RightIn .3s ease; }
-.ios7-right.out { z-index: 800; -webkit-animation: slideRightOut .3s ease; }
+.ios7-right.in { -webkit-animation: ios7RightIn .3s cubic-bezier(.2,.8,.6,1); }
+.ios7-right.out { z-index: 800; -webkit-animation: slideRightOut .3s cubic-bezier(.2,.8,.6,1); }
 
 /* Slide Animations*/
 .slide-right.in  { -webkit-animation: slideRightIn .25s ease; }

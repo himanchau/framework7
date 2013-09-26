@@ -5,6 +5,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<title>Framework</title>
 
 	<!-- App Style Sheet -->
@@ -15,7 +16,7 @@
 
 <body>
 	<!-- Notification Box & Loader (Required) -->
-	<div id="loader">Loading...</div>
+	<div id="loader"></div>
 	<div id="notificationWrapper">
 		<div id="notificationBody">
 			<i></i>
@@ -80,7 +81,7 @@
 			</ul>
 
 			<h2>Cover</h2>
-			<ul>
+			<ul class="chevron selectable">
 				<li data-target="animationTestScreen" data-anim="cover-left">Cover Left</li>
 				<li data-target="animationTestScreen" data-anim="cover-right">Cover Right</li>
 				<li data-target="animationTestScreen" data-anim="cover-up">Cover Up</li>
@@ -88,7 +89,7 @@
 			</ul>
 
 			<h2>Reveal</h2>
-			<ul>
+			<ul class="chevron selectable">
 				<li data-target="animationTestScreen" data-anim="reveal-left">Reveal Left</li>
 				<li data-target="animationTestScreen" data-anim="reveal-right">Reveal Right</li>
 				<li data-target="animationTestScreen" data-anim="reveal-up">Reveal Up</li>
@@ -96,24 +97,24 @@
 			</ul>
 
 			<h2>Pop</h2>
-			<ul>
+			<ul class="chevron selectable">
 				<li data-target="animationTestScreen" data-anim="pop-in">Pop In</li>
 				<li data-target="animationTestScreen" data-anim="pop-out">Pop Out</li>
 			</ul>
 
 			<h2>Fade</h2>
-			<ul>
+			<ul class="chevron selectable">
 				<li data-target="animationTestScreen" data-anim="fade">Fade</li>
 			</ul>
 
 			<h2>Flip</h2>
-			<ul>
+			<ul class="chevron selectable">
 				<li data-target="animationTestScreen" data-anim="flip-left">Flip Left</li>
 				<li data-target="animationTestScreen" data-anim="flip-right">Flip Right</li>
 			</ul>
 
 			<h2>Cube</h2>
-			<ul>
+			<ul class="chevron selectable">
 				<li data-target="animationTestScreen" data-anim="cube-left">Cube Left</li>
 				<li data-target="animationTestScreen" data-anim="cube-right">Cube Right</li>
 			</ul>
@@ -125,15 +126,29 @@
 		<header>
 			<li id="backButton" class="pull-left" data-target="animationScreen" data-anim="fade">
 				<i class="icon-left-open-mini back"></i>
-				<span>Back</span>
+				<span>Settings</span>
 			</li>
-			<h1>Test Screen</h1>
+			<h1>General</h1>
 		</header>
 		<article class="current indented">
-			<ul>
-				<li data-target="animationTestScreen" data-anim="slide-left">
-					Click Back to reverse animation!
-				</li>
+			<ul class="selectable chevron">
+				<li>About</li>
+				<li>Software Update</li>
+			</ul>
+			<ul class="selectable chevron">
+				<li>Siri</li>
+				<li>Spotlight Search</li>
+				<li>Text Size</li>
+				<li>Accessibility</li>
+			</ul>
+			<ul class="selectable chevron">
+				<li>Usage</li>
+				<li>Background App Refresh</li>
+			</ul>
+			<ul class="selectable chevron">
+				<li><span>Auto-Lock</span><span>1 Minute</span></li>
+				<li><span>Passcode Lock</span><span>Off</span></li>
+				<li><span>Restrictions</span><span>Off</span></li>
 			</ul>
 		</article>
 	</section>
