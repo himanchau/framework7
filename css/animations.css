@@ -1,69 +1,69 @@
 /* Aside Menu Show */
-section.show-menu { border-left: 1px solid rgba(0, 0, 0, .2); box-shadow: -5px 0 10px -5px rgba(0, 0, 0, .25); -webkit-animation: showMenu .4s ease forwards; }
-section.hide-menu { -webkit-animation: hideMenu .4s ease forwards; }
+section.show-menu { border-left: 1px solid rgba(0, 0, 0, .2); box-shadow: -5px 0 10px -5px rgba(0, 0, 0, .25); -webkit-animation: showMenu .4s cubic-bezier(.3,.7,.4,1) forwards; }
+section.hide-menu { -webkit-animation: hideMenu .4s cubic-bezier(.3,.7,.4,1) forwards; }
 
 .in {z-index: 100;}
 
 /* Aside Section Change */
-.aside.in  { -webkit-animation: asideIn .4s ease; }
-.aside.out { -webkit-animation: hideMenu .4s ease; }
+.aside.in  { -webkit-animation: asideIn .4s cubic-bezier(.3,.7,.4,1); }
+.aside.out { -webkit-animation: hideMenu .4s cubic-bezier(.3,.7,.4,1); }
 
 /* iOS7 Style Animation */
-.ios7-left.in { -webkit-animation: slideLeftIn .3s cubic-bezier(.2,.8,.6,1); }
-.ios7-left.out { -webkit-animation: ios7LeftOut .3s cubic-bezier(.2,.8,.6,1); }
+.ios7-left.in { -webkit-animation: slideLeftIn .3s cubic-bezier(.3,.7,.4,1); }
+.ios7-left.out { -webkit-animation: ios7LeftOut .3s cubic-bezier(.3,.7,.4,1); }
 
-.ios7-right.in { -webkit-animation: ios7RightIn .3s cubic-bezier(.2,.8,.6,1); }
-.ios7-right.out { z-index: 800; -webkit-animation: slideRightOut .3s cubic-bezier(.2,.8,.6,1); }
+.ios7-right.in { -webkit-animation: ios7RightIn .3s cubic-bezier(.3,.7,.4,1); }
+.ios7-right.out { z-index: 800; -webkit-animation: slideRightOut .3s cubic-bezier(.3,.7,.4,1); }
 
 /* Slide Animations*/
-.slide-right.in  { -webkit-animation: slideRightIn .25s ease; }
-.slide-right.out { -webkit-animation: slideRightOut .25s ease; }
+.slide-right.in  { -webkit-animation: slideRightIn .25s cubic-bezier(.3,.7,.4,1); }
+.slide-right.out { -webkit-animation: slideRightOut .25s cubic-bezier(.3,.7,.4,1); }
 
-.slide-left.in  { -webkit-animation: slideLeftIn .25s ease; }
-.slide-left.out { -webkit-animation: slideLeftOut .25s ease; }
+.slide-left.in  { -webkit-animation: slideLeftIn .25s cubic-bezier(.3,.7,.4,1); }
+.slide-left.out { -webkit-animation: slideLeftOut .25s cubic-bezier(.3,.7,.4,1); }
 
-.slide-up.in  { -webkit-animation: slideUpIn .3s ease; }
-.slide-up.out { -webkit-animation: slideUpOut .3s ease; }
+.slide-up.in  { -webkit-animation: slideUpIn .3s cubic-bezier(.3,.7,.4,1); }
+.slide-up.out { -webkit-animation: slideUpOut .3s cubic-bezier(.3,.7,.4,1); }
 
-.slide-down.in  { -webkit-animation: slideDownIn .3s ease; }
-.slide-down.out { -webkit-animation: slideDownOut .3s ease; }
+.slide-down.in  { -webkit-animation: slideDownIn .3s cubic-bezier(.3,.7,.4,1); }
+.slide-down.out { -webkit-animation: slideDownOut .3s cubic-bezier(.3,.7,.4,1); }
 
 /* Cover Animations */
-.cover-right.in  { -webkit-animation: slideRightIn .25s ease; }
-.cover-right.out { -webkit-animation: noAnim .25s ease; }
+.cover-right.in  { -webkit-animation: slideRightIn .25s cubic-bezier(.3,.7,.4,1); }
+.cover-right.out { -webkit-animation: noAnim .25s cubic-bezier(.3,.7,.4,1); }
 
-.cover-left.in  { -webkit-animation: slideLeftIn .25s ease; }
-.cover-left.out { -webkit-animation: noAnim .25s ease; }
+.cover-left.in  { -webkit-animation: slideLeftIn .25s cubic-bezier(.3,.7,.4,1); }
+.cover-left.out { -webkit-animation: noAnim .25s cubic-bezier(.3,.7,.4,1); }
 
-.cover-up.in  { -webkit-animation: slideUpIn .3s ease; }
-.cover-up.out { -webkit-animation: noAnim .3s ease; }
+.cover-up.in  { -webkit-animation: slideUpIn .3s cubic-bezier(.3,.7,.4,1); }
+.cover-up.out { -webkit-animation: noAnim .3s cubic-bezier(.3,.7,.4,1); }
 
-.cover-down.in  { -webkit-animation: slideDownIn .3s ease; }
-.cover-down.out { -webkit-animation: noAnim .3s ease; }
+.cover-down.in  { -webkit-animation: slideDownIn .3s cubic-bezier(.3,.7,.4,1); }
+.cover-down.out { -webkit-animation: noAnim .3s cubic-bezier(.3,.7,.4,1); }
 
 /* Reveal Animations */
-.reveal-right.in  { -webkit-animation: noAnim .25s ease; }
-.reveal-right.out { z-index: 800; -webkit-animation: slideRightOut .25s ease; }
+.reveal-right.in  { -webkit-animation: noAnim .25s cubic-bezier(.3,.7,.4,1); }
+.reveal-right.out { z-index: 800; -webkit-animation: slideRightOut .25s cubic-bezier(.3,.7,.4,1); }
 
-.reveal-left.in  { -webkit-animation: noAnim .25s ease; }
-.reveal-left.out { z-index: 800; -webkit-animation: slideLeftOut .25s ease; }
+.reveal-left.in  { -webkit-animation: noAnim .25s cubic-bezier(.3,.7,.4,1); }
+.reveal-left.out { z-index: 800; -webkit-animation: slideLeftOut .25s cubic-bezier(.3,.7,.4,1); }
 
-.reveal-up.in  { -webkit-animation: noAnim .3s ease; }
-.reveal-up.out { z-index: 800; -webkit-animation: slideUpOut .3s ease; }
+.reveal-up.in  { -webkit-animation: noAnim .3s cubic-bezier(.3,.7,.4,1); }
+.reveal-up.out { z-index: 800; -webkit-animation: slideUpOut .3s cubic-bezier(.3,.7,.4,1); }
 
-.reveal-down.in  { -webkit-animation: noAnim .3s ease; }
-.reveal-down.out { z-index: 800; -webkit-animation: slideDownOut .3s ease; }
+.reveal-down.in  { -webkit-animation: noAnim .3s cubic-bezier(.3,.7,.4,1); }
+.reveal-down.out { z-index: 800; -webkit-animation: slideDownOut .3s cubic-bezier(.3,.7,.4,1); }
 
 /* Pop Animations */
-.pop-in.in  { -webkit-animation: popInIn .3s ease; }
-.pop-in.out { -webkit-animation: popInOut .3s ease; }
+.pop-in.in  { -webkit-animation: popInIn .3s cubic-bezier(.3,.7,.4,1); }
+.pop-in.out { -webkit-animation: popInOut .3s cubic-bezier(.3,.7,.4,1); }
 
-.pop-out.in  { -webkit-animation: popOutIn .3s ease; }
-.pop-out.out { -webkit-animation: popOutOut .3s ease; }
+.pop-out.in  { -webkit-animation: popOutIn .3s cubic-bezier(.3,.7,.4,1); }
+.pop-out.out { -webkit-animation: popOutOut .3s cubic-bezier(.3,.7,.4,1); }
 
 /* Fade Animation */
-.fade.in  { -webkit-animation: fadeIn .4s ease; }
-.fade.out { -webkit-animation: noAnim .4s ease; }
+.fade.in  { -webkit-animation: fadeIn .4s cubic-bezier(.3,.7,.4,1); }
+.fade.out { -webkit-animation: noAnim .4s cubic-bezier(.3,.7,.4,1); }
 
 /* Flip Animations */
 .flip-left.in  { -webkit-animation: flipLeftIn .5s linear; }
@@ -73,11 +73,11 @@ section.hide-menu { -webkit-animation: hideMenu .4s ease forwards; }
 .flip-right.out { -webkit-animation: flipRightOut .5s linear; }
 
 /* Cube Animations */
-.cube-left.in  { -webkit-animation: cubeLeftIn .5s ease; }
-.cube-left.out { -webkit-animation: cubeLeftOut .5s ease; }
+.cube-left.in  { -webkit-animation: cubeLeftIn .5s cubic-bezier(.3,.7,.4,1); }
+.cube-left.out { -webkit-animation: cubeLeftOut .5s cubic-bezier(.3,.7,.4,1); }
 
-.cube-right.in  { -webkit-animation: cubeRightIn .5s ease; }
-.cube-right.out { -webkit-animation: cubeRightOut .5s ease; }
+.cube-right.in  { -webkit-animation: cubeRightIn .5s cubic-bezier(.3,.7,.4,1); }
+.cube-right.out { -webkit-animation: cubeRightOut .5s cubic-bezier(.3,.7,.4,1); }
 
 /* Animation Keyframes */
 @-webkit-keyframes noAnim { 0% {} 100% {} }
